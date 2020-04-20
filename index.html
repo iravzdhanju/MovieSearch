@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies Search</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans:500,700" rel="stylesheet">
+    <link href="./img/favicon.ico" rel="icon" sizes="192x192">
 </head>
-<body>
+
+<body onload="changeBackground()">
     <header>
         <nav id="top">
             <div class="topbar">
-                
-              <p class="logo">Dhanju</p> 
-             
+
+                 <p class="logo"><img src="./img/video.png" class="logoimg"> Movies Filter</p>
+
             </div>
-       
         </nav>
     </header>
-<div class="containers">
-<div class="moviebox">
-    <form id="searchForm">
-        <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
-    </form>
-</div>
-
-
-    <div class="container">
-        <div id="movies" class="row"></div>
-      </div>
+    <div class="containers">
+        <div class="moviebox">
+            <form id="searchForm">
+                <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
+            </form>
+        </div>
+        <div class="container">
+            <div id="movies" class="row"></div>
+        </div>
     </div>
-<script src="./js/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/axios.min.js"></script>
-  <script type="text/javascript" src="./js/mains.js"></script>
+    <footer id="footer">
+          <p class="footerLogo">Copyright Ravi Dhanju 2020</p>  
+    </footer>
+
+
+
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script type="text/javascript" src="./js/mains.js"></script>
 </body>
+
 </html>
