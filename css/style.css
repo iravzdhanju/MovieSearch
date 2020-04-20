@@ -40,10 +40,12 @@ header nav#top .topbar svg.menu {
     fill: #fff;
     border-radius: 50%
 }
-.logoimg{
-    height:20px;
-    width:20px;
+
+.logoimg {
+    height: 20px;
+    width: 20px;
 }
+
 header nav#top .topbar svg.menu:hover {
     background: rgba(0, 0, 0, 0.1)
 }
@@ -56,6 +58,29 @@ header nav#top .topbar svg.menu:hover {
     letter-spacing: 1px;
     color: #ff6332;
 }
+
+.link-list {
+    text-align: center;
+}
+
+li {
+    color: #fff;
+    height: 32px;
+    display: inline-block;
+    padding: 10px 11px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+@media (max-width: 756px) {
+    li {
+        padding: 10px 3px;
+    }
+}
+
 
 .form-control {
     margin: auto;
@@ -148,20 +173,20 @@ header nav#top .topbar svg.menu:hover {
     margin: auto;
 }
 
-#footer{
+#footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 69px;
     background: #fff;
-    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
     z-index: 1;
     transition: all 225ms ease-in-out;
     overflow: hidden;
-    
 }
-.footerLogo{
+
+.footerLogo {
     text-align: center;
     padding: 25px;
-   color: #ff6332;
+    color: #ff6332;
 }
