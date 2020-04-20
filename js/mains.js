@@ -17,12 +17,13 @@ function getMovies(searchText) {
               <div class="columns-movie-list">
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
                 <h5 class="titles">${movie.title}</h5>
-                <a onclick="movieSelected('${movie.id}')" class="btn btn-primary" href="https://iravzdhanju.github.io/MovieSearch/"><h5 class="details">Movie Details</a>
+                <a onclick="movieSelected('${movie.id}')" href="https://iravzdhanju.github.io/MovieSearch/"><h5 class="details">Movie Details</a>
               </div>
             </div>
           `;
       });
       $('#movies').html(output);
+      
     })
     .catch(function (error) {
       console.log(error);
