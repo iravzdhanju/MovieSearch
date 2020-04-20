@@ -58,6 +58,10 @@ header nav#top .topbar svg.menu:hover {
     letter-spacing: 1px;
     color: #ff6332;
 }
+ a{
+    list-style-type: none;
+    text-decoration: none;
+}
 
 .link-list {
     text-align: center;
