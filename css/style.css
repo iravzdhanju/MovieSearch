@@ -73,7 +73,7 @@ header nav#top .topbar svg.menu:hover {
 
 @media (max-width: 756px) {
     .form-control {
-        width: 80%;
+        width: 96%;
     }
 }
 
