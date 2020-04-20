@@ -1,18 +1,18 @@
 $(document).ready(() => {
-    $("#searchForm").on('keyup', (e) => {
-      e.preventDefault();
-      let searchText = $("#searchText").val();
-      getMovies(searchText);
-    });
+  $("#searchForm").on('keyup', (e) => {
+    e.preventDefault();
+    let searchText = $("#searchText").val();
+    getMovies(searchText);
   });
-  
-  function getMovies(searchText){
-    axios.get("https://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=" + searchText)
-      .then(function (response) {
-        let movies = response.data.results;
-        let output = '';
-        $.each(movies, (index, movie) => {
-          output+=`
+});
+
+function getMovies(searchText) {
+  axios.get("https://api.themoviedb.org/3/search/movie?api_key=98325a9d3ed3ec225e41ccc4d360c817&language=en-US&query=" + searchText)
+    .then(function (response) {
+      let movies = response.data.results;
+      let output = '';
+      $.each(movies, (index, movie) => {
+        output += `
             <div class="column-movies">
               <div class="columns-movie-list">
                 <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
@@ -21,27 +21,27 @@ $(document).ready(() => {
               </div>
             </div>
           `;
-        });
-        $('#movies').html(output);
-      })
-      .catch(function (error) {
-        console.log(error);
       });
-  }
-  
-  function movieSelected(id){
-    sessionStorage.setItem('movieId', id);
-    window.location = 'movie.html';
-    return false;
-  }
-  
-  function getMovie(){
-    let movieId = sessionStorage.getItem('movieId');
-   
-    axios.get("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=98325a9d3ed3ec225e41ccc4d360c817")
-      .then(function (response) {
+      $('#movies').html(output);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
+
+function movieSelected(id) {
+  sessionStorage.setItem('movieId', id);
+  window.location = 'movie.html';
+  return false;
+}
+
+function getMovie() {
+  let movieId = sessionStorage.getItem('movieId');
+
+  axios.get("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=98325a9d3ed3ec225e41ccc4d360c817")
+    .then(function (response) {
       let movie = response.data;
- 
+
       let output = `
           <div class="row">
             <div class="box">
@@ -60,17 +60,17 @@ $(document).ready(() => {
          
       `;
       $('#movie').html(output);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}
 
 
-var colors = ['#760CE8', '#4782B1', '#E8890C','#EF6C00','#764ba2'];
+var colors = ['#760CE8', '#4782B1', '#E8890C', '#EF6C00', '#764ba2'];
 
-var changeBackground = function() {
-  document.body.style.background = colors[Math.floor(Math.random()*colors.length)];
+var changeBackground = function () {
+  document.body.style.background = colors[Math.floor(Math.random() * colors.length)];
 };
 
 changeBackground();

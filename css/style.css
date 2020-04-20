@@ -75,12 +75,12 @@ li {
     line-height: 32px;
     text-transform: uppercase;
 }
+
 @media (max-width: 756px) {
     li {
         padding: 10px 3px;
     }
 }
-
 
 .form-control {
     margin: auto;
